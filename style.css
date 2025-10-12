@@ -50,15 +50,15 @@ canvas {
   bottom: 0;
   width: 100%;
   height: fit-content;
-  padding: 1rem;
+  padding: 1.6rem;
   display: flex;
   justify-content: center;
 }
 
 .instructions {
   color: white;
-  background: rgba(0, 0, 0, 1);
-  padding-right: 1rem !important;
-  border-radius: 1rem;
-  line-height: 130%;
+  background: rgb(55, 55, 55);
+  padding-right: 1.5rem !important;
+  /* border-radius: 1rem; */
+  line-height: 140%;
 }
