@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- p5.js -->
+    <script src="p5.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.min.js"></script> -->
+
+    <!-- import mediapipe object and make it available globally -->
+    <script type="module">
+      import { mediaPipe } from './mediaPipe.js';
+
+      // we can use
+      // mediaPipe.predictWebcam() <- pass this your video
+      // mediaPipe.handednesses <- right/left handedness
+      // mediaPipe.landmarks <- 3d landmarks
+      // mediaPipe.worldLandmarks <- 3d landmarks in world coordinates
+
+      // make mediaPipe available everywhere
+      window.mediaPipe = mediaPipe;
+    </script>
   </head>
+
   <body>
-    tlqkf
+    <!-- instructions -->
+    <div class="wrapper">
+      <div class="instructions">
+        <ol>
+          <li>Allow camera access.</li>
+          <li>Move your right hand in front of the camera.</li>
+          <li>Go crazy!</li>
+          <li>Mobile users: wait a while for loading &#9787;</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="sketch">
+        <!-- sketch will appear here! -->
+      </div>
+    </div>
+
+    <!-- sketch -->
+    <script src="sketch.js" type="text/javascript"></script>
   </body>
 </html>
